@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Text} from 'react-native';
+import {RouteProp} from '@react-navigation/native';
 
+import {RootStackParamList} from '../types/navigation';
 import {ScreenTemplate} from '../organisms';
 
-const Details: React.FC = () => {
+type Props = {
+  route: RouteProp<RootStackParamList, 'Details'>;
+};
+
+const Details: React.FC<Props> = ({route}) => {
+  const {id} = route.params;
+  const [isLoading, setIsloading] = useState(false);
+
   return (
-    <ScreenTemplate>
+    <ScreenTemplate isLoading={isLoading}>
       <Text>Details</Text>
     </ScreenTemplate>
   );

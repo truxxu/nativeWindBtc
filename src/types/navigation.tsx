@@ -4,7 +4,7 @@ import {RouteProp} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 
 // Define the params for each screen
-type RootStackParamList = {
+export type RootStackParamList = {
   Home: undefined;
   Details: undefined;
 };

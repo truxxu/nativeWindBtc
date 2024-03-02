@@ -7,10 +7,20 @@ import {RootStackParamList} from './src/types/navigation';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
+const STACK_OPTIONS = {
+  headerStyle: {
+    backgroundColor: '#111827',
+  },
+  headerShadowVisible: false,
+  headerTintColor: '#F59E0B',
+};
+
 const App: React.FC = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{...STACK_OPTIONS}}>
         <Stack.Screen
           name="Home"
           component={Home}

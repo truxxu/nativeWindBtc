@@ -3,8 +3,9 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {Home, Details} from './src/screens';
+import {RootStackParamList} from './src/types/navigation';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
 const App: React.FC = () => {
   return (
@@ -15,7 +16,11 @@ const App: React.FC = () => {
           component={Home}
           options={{headerShown: false}}
         />
-        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen
+          name="Details"
+          component={Details}
+          options={({route}) => ({title: route.params.label})}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

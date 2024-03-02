@@ -6,7 +6,10 @@ import {StackNavigationProp} from '@react-navigation/stack';
 // Define the params for each screen
 export type RootStackParamList = {
   Home: undefined;
-  Details: undefined;
+  Details: {
+    id: string;
+    label: string;
+  };
 };
 
 // Define the navigation prop type for the stack

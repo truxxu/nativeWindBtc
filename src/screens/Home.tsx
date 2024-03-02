@@ -1,5 +1,4 @@
 import React from 'react';
-import {Button} from 'react-native';
 
 import {RootStackNavigationProp} from '../types/navigation';
 import {ScreenTemplate, Pairs} from '../organisms';
@@ -9,16 +8,12 @@ type Props = {
   navigation: RootStackNavigationProp<'Home'>;
 };
 
-const Home: React.FC<Props> = ({navigation}) => {
+const Home: React.FC<Props> = () => {
   return (
     <ScreenTemplate>
       <Text text="Welcome" variant="title" />
       <Text text="Select a pair to see more details" />
       <Pairs />
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      />
     </ScreenTemplate>
   );
 };

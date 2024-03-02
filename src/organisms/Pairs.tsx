@@ -6,22 +6,22 @@ import {PairCard} from '../molecules';
 const PAIRS = [
   {
     label: 'BTC/USD',
-    value: 'usd',
+    id: 'usd',
     symbol: '$',
   },
   {
     label: 'BTC/EUR',
-    value: 'eur',
+    id: 'eur',
     symbol: '€',
   },
   {
     label: 'BTC/GBP',
-    value: 'gbp',
+    id: 'gbp',
     symbol: '£',
   },
   {
     label: 'BTC/CHF',
-    value: 'chf',
+    id: 'chf',
     symbol: '₣',
   },
 ];

@@ -2,8 +2,8 @@ import React from 'react';
 import {Text as RText} from 'react-native';
 
 type Props = {
-  text: string | null;
-  variant?: 'primary' | 'title';
+  text: string | null | undefined;
+  variant?: 'primary' | 'title' | 'error';
   align?: string;
   weight?: string | null;
 };
@@ -16,6 +16,11 @@ const VARIANTS = {
   },
   title: {
     color: 'text-yellow-500',
+    size: 'text-xl',
+    weight: 'font-bold',
+  },
+  error: {
+    color: 'text-red-700',
     size: 'text-xl',
     weight: 'font-bold',
   },

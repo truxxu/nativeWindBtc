@@ -19,11 +19,6 @@ const PAIRS = [
     id: 'gbp',
     symbol: '£',
   },
-  {
-    label: 'BTC/CHF',
-    id: 'chf',
-    symbol: '₣',
-  },
 ];
 
 const Pairs: React.FC = () => {

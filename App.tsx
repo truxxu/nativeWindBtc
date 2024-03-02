@@ -1,12 +1,9 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+
+import {Home} from './src/screens';
 
 const App: React.FC = () => {
-  return (
-    <View className="flex-1 items-center justify-center bg-white">
-      <Text>Hello World!</Text>
-    </View>
-  );
+  return <Home />;
 };
 
 export default App;

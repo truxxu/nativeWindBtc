@@ -5,6 +5,8 @@ import {RootStackNavigationProp} from '../types/navigation';
 import {ScreenTemplate} from '../organisms';
 import {Text} from '../atoms';
 
+import {RootStackNavigationProp} from '../types/navigation';
+
 type Props = {
   navigation: RootStackNavigationProp<'Home'>;
 };
